@@ -1,8 +1,9 @@
 using System;
+using System.Diagnostics;
 
 namespace DigitallInoovation
 {
-   
+    [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public class Pilha
     {
        
@@ -39,4 +40,9 @@ namespace DigitallInoovation
                 this.item = item;
             }
         }
-}
+
+        private string GetDebuggerDisplay()
+        {
+            return ToString();
+        }
+    }
